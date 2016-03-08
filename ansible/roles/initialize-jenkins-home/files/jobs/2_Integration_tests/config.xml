@@ -19,7 +19,7 @@
       <description></description>
       <switches></switches>
       <tasks>integrationTest</tasks>
-      <rootBuildScriptDir>${workspace}/ToDo</rootBuildScriptDir>
+      <rootBuildScriptDir></rootBuildScriptDir>
       <buildFile></buildFile>
       <gradleName>(Default)</gradleName>
       <useWrapper>true</useWrapper>

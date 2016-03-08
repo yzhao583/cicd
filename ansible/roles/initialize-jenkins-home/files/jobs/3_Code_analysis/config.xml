@@ -20,7 +20,7 @@
       <description></description>
       <switches></switches>
       <tasks>sonarRunner</tasks>
-      <rootBuildScriptDir>${workspace}/ToDo</rootBuildScriptDir>
+      <rootBuildScriptDir></rootBuildScriptDir>
       <buildFile></buildFile>
       <gradleName>(Default)</gradleName>
       <useWrapper>true</useWrapper>

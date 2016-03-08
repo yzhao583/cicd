@@ -19,7 +19,7 @@
       <description></description>
       <switches></switches>
       <tasks>build publish</tasks>
-      <rootBuildScriptDir>${workspace}/ToDo</rootBuildScriptDir>
+      <rootBuildScriptDir></rootBuildScriptDir>
       <buildFile></buildFile>
       <gradleName>(Default)</gradleName>
       <useWrapper>true</useWrapper>
