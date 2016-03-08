@@ -1,0 +1,24 @@
+#Vagrant
+.vagrant
+
+#Gradle
+.gradle
+build
+
+# Mac
+.DS_Store
+
+# Eclipse
+.settings/
+.classpath
+.project
+
+# Maven
+target/
+
+#IntelliJ
+.idea/
+target
+*.iws
+*.ipr
+*.iml

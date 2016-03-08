@@ -1,0 +1,3 @@
+- name: Copy Jenkins jobs
+  copy: src=jobs dest=/opt/ci-server/jenkins/ owner=root mode=600
+  tags: [copy jenkins-jobs]

@@ -1,0 +1,5 @@
+- name: Jenkins-home directory is present
+  file:
+    path=/opt/ci-server/jenkins
+    state=directory
+  tags: [jenkins-home]

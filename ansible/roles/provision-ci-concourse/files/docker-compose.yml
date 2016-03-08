@@ -1,0 +1,5 @@
+gocd:
+    image: concourse/concourse-ci
+    ports:
+        - 8080:8080
+        - 5001:5000
