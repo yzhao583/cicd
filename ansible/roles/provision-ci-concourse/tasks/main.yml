@@ -1,3 +1,0 @@
-- name: Provision CI environment with Jenkins, Sonar, Artifactory and ELK
-  shell: sudo docker-compose up -d chdir=/vagrant/ansible/roles/provision-ci-concourse/files
-  tags: [provision-ci]
