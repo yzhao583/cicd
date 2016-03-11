@@ -60,4 +60,6 @@ Under env directory:
 	# ansible-playbook -i ansible/hosts -s -u vagrant ansible/cd.yml
 	ansible-playbook -i ansible/hosts -s ansible/cd.yml
 
+	You can ssh in using ssh vagrant@192.168.50.91
+
 
