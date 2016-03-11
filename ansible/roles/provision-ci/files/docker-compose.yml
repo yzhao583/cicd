@@ -24,7 +24,7 @@ jenkins:
     restart: always
 
 sonar:
-    image: sonarqube:5.1.2
+    image: sonarqube:5.4
     environment:
         - SONARQUBE_JDBC_USERNAME=sonar
         - SONARQUBE_JDBC_PASSWORD=sonar
