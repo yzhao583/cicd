@@ -15,7 +15,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     cicd.vm.network :forwarded_port, host: 8081, guest: 8081  #Artifactory
     cicd.vm.network :forwarded_port, host: 5000, guest: 5000  #Sonar
     cicd.vm.network :forwarded_port, host: 9000, guest: 9000  #Sonar
-    cicd.vm.network :forwarded_port, host: 8153, guest: 8153  #GOCD
     cicd.vm.network :forwarded_port, host: 2201, guest: 22, id: "ssh", auto_correct: true
     cicd.vm.network "private_network", ip: "192.168.50.91"
     cicd.vm.hostname = "cicd"
