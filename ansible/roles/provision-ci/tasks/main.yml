@@ -4,7 +4,7 @@
   # become: yes
   # become_user: cicd-user
 
-- name: Provision CI environment with Jenkins, Sonar, Artifactory and ELK
+- name: Provision CI environment with Jenkins, Sonar, Artifactory
   shell: sudo docker-compose up -d chdir=~
   tags: [provision-ci]
   # become: yes
