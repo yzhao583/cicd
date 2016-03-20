@@ -21,7 +21,7 @@ services:
         user: root
         links:
             - db
-            - artifactory
+#            - artifactory
             - sonar
         restart: always
 
@@ -39,11 +39,11 @@ services:
             - db
         restart: always
 
-    artifactory:
-        image: mattgruter/artifactory
-        ports:
-            - 8081:8080
-        volumes:
-            - /opt/ci-server/artifactory/data:/var/opt/jfrog/artifactory/data
-            - /opt/ci-server/artifactory/backup/etc:/var/opt/jfrog/artifactory/etc
-            - /opt/ci-server/artifactory/backup:/var/opt/jfrog/artifactory/backup
+#    artifactory:
+#        image: mattgruter/artifactory
+#        ports:
+#            - 8081:8080
+#        volumes:
+#            - /opt/ci-server/artifactory/data:/var/opt/jfrog/artifactory/data
+#            - /opt/ci-server/artifactory/backup/etc:/var/opt/jfrog/artifactory/etc
+#            - /opt/ci-server/artifactory/backup:/var/opt/jfrog/artifactory/backup

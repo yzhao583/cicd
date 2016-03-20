@@ -55,26 +55,6 @@
       <maximumClassCoverage>50</maximumClassCoverage>
       <changeBuildStatus>false</changeBuildStatus>
     </hudson.plugins.jacoco.JacocoPublisher>
-    <hudson.plugins.cloneworkspace.CloneWorkspacePublisher plugin="clone-workspace-scm@0.6">
-      <workspaceGlob>**/*</workspaceGlob>
-      <criteria>Any</criteria>
-      <archiveMethod>TAR</archiveMethod>
-      <overrideDefaultExcludes>false</overrideDefaultExcludes>
-    </hudson.plugins.cloneworkspace.CloneWorkspacePublisher>
-    <hudson.plugins.parameterizedtrigger.BuildTrigger plugin="parameterized-trigger@2.27">
-      <configs>
-        <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
-          <configs>
-            <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
-              <properties>SOURCE_BUILD_NUMBER=${SOURCE_BUILD_NUMBER}</properties>
-            </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
-          </configs>
-          <projects>4_Artifact_distribution</projects>
-          <condition>ALWAYS</condition>
-          <triggerWithNoParameters>false</triggerWithNoParameters>
-        </hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
-      </configs>
-    </hudson.plugins.parameterizedtrigger.BuildTrigger>
   </publishers>
   <buildWrappers>
     <org.jenkinsci.plugins.buildnamesetter.BuildNameSetter plugin="build-name-setter@1.3">
