@@ -12,7 +12,7 @@ services:
         restart: always
 
     jenkins:
-        image: jenkins
+        image: jenkins:2.0
         volumes:
             - /opt/ci-server/jenkins:/var/jenkins_home
         ports:
