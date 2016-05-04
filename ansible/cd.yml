@@ -10,4 +10,3 @@
     - 'marvinpinto.docker'
     - 'franklinkim.docker-compose'
     - provision-ci
-    # # - provision-ci-concourse
