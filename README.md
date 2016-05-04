@@ -60,6 +60,7 @@ Under env directory:
 	# ansible-playbook -i ansible/hosts -s -u vagrant ansible/cd.yml
 	ansible-playbook -i ansible/hosts -s ansible/cd.yml
 
-ssh: vagrant@192.168.50.91
+7 - ssh in:
+	ssh vagrant@192.168.50.91
 
 
