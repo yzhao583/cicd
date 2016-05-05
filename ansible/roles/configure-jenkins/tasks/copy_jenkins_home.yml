@@ -1,0 +1,3 @@
+- name: Copy JENKINS_HOME
+  copy: src=JENKINS_HOME dest=/opt/ci-server/ owner=root mode=600
+  tags: [copy JENKINS_HOME]

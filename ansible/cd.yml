@@ -6,7 +6,8 @@
   roles:
     - update-apt
     # # - secure-server
-    - initialize-jenkins-home
+    - create-jenkins-home
     - 'marvinpinto.docker'
     - 'franklinkim.docker-compose'
     - provision-ci
+    - configure-jenkins

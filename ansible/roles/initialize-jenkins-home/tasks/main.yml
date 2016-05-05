@@ -1,4 +1,0 @@
-- include: create_jenkins_home_directory.yml
-- include: copy_jenkins_config.yml
-- include: copy_jenkins_plugins.yml
-- include: copy_jenkins_jobs.yml

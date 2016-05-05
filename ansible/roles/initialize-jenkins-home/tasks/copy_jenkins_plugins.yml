@@ -1,3 +1,0 @@
-- name: Copy Jenkins Config
-  copy: src=plugins dest=/opt/ci-server/jenkins/ owner=root mode=600
-  tags: [copy jenkins-plugins]

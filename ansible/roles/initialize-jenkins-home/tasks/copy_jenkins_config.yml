@@ -1,3 +1,0 @@
-- name: Copy Jenkins Config
-  copy: src=config.xml dest=/opt/ci-server/jenkins/config.xml
-  tags: [copy jenkins-config]
