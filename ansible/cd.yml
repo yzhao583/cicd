@@ -1,10 +1,10 @@
-- hosts: cicd
+- hosts: all
   remote_user: vagrant
   become: yes
   become_method: sudo
   # become_user: cicd-user
   roles:
-    - update-apt
+    # - update-apt
     # # - secure-server
     - create-jenkins-home
     - 'marvinpinto.docker'

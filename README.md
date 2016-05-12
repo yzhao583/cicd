@@ -5,7 +5,7 @@ Prerequisites:
 	ansible-galaxy install franklinkim.docker-compose
 
 Under env directory:
-1 - Modify ansible/hosts/hosts (domain name/ip) and cd/yml (hosts and remote_user) files according to your needs
+1 - Modify cd.yml file and replace the "remote_user" with the user you'll be using.
 
 2 - Create your RSA Key Pair:
 	The first step is to create the key pair on the client machine (there is a good chance that this will just be your computer):
@@ -59,8 +59,12 @@ Under env directory:
 6 - Provision the CICD host:
 	# ansible-playbook -i ansible/hosts -s -u vagrant ansible/cd.yml
 	ansible-playbook -i ansible/hosts -s ansible/cd.yml
+	ansible-playbook -i 192.168.50.91, ansible/cd.yml
+	ansible-playbook -i cicd.cloudapp.net, ansible/cd.yml
 
 7 - ssh in:
 	ssh vagrant@192.168.50.91
+	ssh cicduser@cicd.cloudapp.net
 
+	Alpine?
 
