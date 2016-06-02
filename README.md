@@ -66,5 +66,57 @@ Under env directory:
 	ssh vagrant@192.168.50.91
 	ssh cicduser@cicd.cloudapp.net
 
-	Alpine?
 
+
+ssh-keygen -R hostname
+ssh-keygen -R 192.168.50.91
+
+======================================
+How to enable Docker Remote API:
+
+sudo vi /etc/init/docker.conf
+
+DOCKER_OPTS="-H tcp://0.0.0.0:4243 -H unix:///var/run/docker.sock"
+
+sudo service docker restart
+
+-----------
+
+killercentury/jenkins-slave-dind
+
+-----------
+Docker Machine notes
+docker-machine create \
+    --driver=generic \
+    --generic-ip-address=IP_ADDRESS \
+    --generic-ssh-user=USERNAME \
+    --generic-ssh-key=PATH_TO_SSH_KEY \
+    --generic-ssh-port=PORT \
+        MACHINE_NAME
+
+
+docker-machine create -d generic \
+--generic-ssh-user ubuntu \
+--generic-ssh-key ~/Downloads/manually_created_key.pub \
+--generic-ip-address 12.34.56.78 \
+jungle
+
+
+
+docker-machine ls
+
+
+$ docker-machine env default
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://172.16.62.130:2376"
+export DOCKER_CERT_PATH="/Users/<yourusername>/.docker/machine/machines/default"
+export DOCKER_MACHINE_NAME="default"
+# Run this command to configure your shell:
+# eval "$(docker-machine env default)"
+
+eval "$(docker-machine env default)"
+
+docker run busybox echo hello world
+
+docker-machine stop default
+docker-machine start default

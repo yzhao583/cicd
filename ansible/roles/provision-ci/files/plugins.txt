@@ -1,10 +1,10 @@
 ace-editor:1.1
-branch-api:1.7
+branch-api:1.8
 cloudbees-folder:5.10
-credentials:1.28
+credentials:2.0
 authentication-tokens:1.2
 icon-shim:2.0.3
-durable-task:1.9
+durable-task:1.10
 git:2.4.4
 git-client:1.19.6
 git-server:1.6
@@ -15,7 +15,7 @@ jquery-detached:1.2.1
 junit:1.13
 mailer:1.17
 matrix-project:1.6
-mock-slave:1.8
+mock-slave:1.9
 momentjs:1.1.1
 pipeline-build-step:2.0
 pipeline-input-step:2.0
@@ -32,9 +32,12 @@ workflow-basic-steps:2.0
 workflow-cps:2.2
 workflow-cps-global-lib:2.0
 workflow-durable-task-step:2.0
-workflow-job:2.1
+workflow-job:2.2
 workflow-multibranch:2.3
 workflow-scm-step:2.0
 workflow-step-api:2.0
 workflow-support:2.0
 docker-workflow:1.4
+token-macro:1.12.1
+ssh-slaves:1.11
+docker-plugin:0.16.0
