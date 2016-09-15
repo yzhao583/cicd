@@ -1,6 +1,6 @@
 Prerequisites:
 - Ansible installed on the local
-- (Instead of creating our own docker ansible recepie) Install docker role on the local from Ansible galaxy using following command:
+- (Instead of creating our own docker ansible role) Install a proven docker role on the local from Ansible galaxy using following command:
 	ansible-galaxy install angstwad.docker_ubuntu
 
 Under env directory:
