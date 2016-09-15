@@ -5,9 +5,7 @@
   # become_user: cicd-user
   roles:
     # - update-apt
-    # # - secure-server
+    - 'angstwad.docker_ubuntu'
     - create-jenkins-home
-    - 'marvinpinto.docker'
-    - 'franklinkim.docker-compose'
     - provision-ci
     - configure-jenkins

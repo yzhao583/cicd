@@ -1,8 +1,7 @@
 Prerequisites:
 - Ansible installed on the local
-- Install docker role on the local from Ansible galaxy using following command:
-	ansible-galaxy install marvinpinto.docker
-	ansible-galaxy install franklinkim.docker-compose
+- (Instead of creating our own docker ansible recepie) Install docker role on the local from Ansible galaxy using following command:
+	ansible-galaxy install angstwad.docker_ubuntu
 
 Under env directory:
 1 - Modify cd.yml file and replace the "remote_user" with the user you'll be using.
@@ -23,27 +22,7 @@ Under env directory:
 
 	cat ~/.ssh/id_rsa.pub | ssh vagrant@192.168.50.91 "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"
 
-4 - Secure the server:
-	ansible-playbook -i ansible/hosts -s -u vagrant ansible/secure-server.yml
-
-5 - Create cicd-user:
-	If we already have a cicd user, you can skip this step
-	Note: This sitep is currently part of sercure server. Needs to be separated as a role.
-
-6 - Optional Step Four—Disable the Password for Root Login
-	Once you have copied your SSH keys unto your server and ensured that you can log in with the SSH keys alone, you can go ahead and restrict the root login to only be permitted via SSH keys.
-
-	In order to do this, open up the SSH config file:
-
-	sudo nano /etc/ssh/sshd_config
-	Within that file, find the line that includes PermitRootLogin and modify it to ensure that users can only connect with their SSH key:
-
-	PermitRootLogin without-password
-	Put the changes into effect:
-
-	reload ssh
-
-5 - Test Ansible:
+4 - Test Ansible:
 	- The command below assumes you can already authenticate to your server using the root account with public key authentication:
 		ansible -i ansible/hosts cicd -m ping -u vagrant
 	- If this is not the case, you can use the ‘-u’ option to specify a different account name and ‘-k’ to ask Ansible to prompt you for an SSH password
@@ -56,17 +35,15 @@ Under env directory:
 	    "ping": "pong"
 	}
 
-6 - Provision the CICD host:
-	# ansible-playbook -i ansible/hosts -s -u vagrant ansible/cd.yml
+5 - Provision the CICD host:
 	ansible-playbook -i ansible/hosts -s ansible/cd.yml
 	ansible-playbook -i 192.168.50.91, ansible/cd.yml
-	ansible-playbook -i cicd.cloudapp.net, ansible/cd.yml
 
-7 - ssh in:
+6 - ssh in:
 	ssh vagrant@192.168.50.91
-	ssh cicduser@cicd.cloudapp.net
 
 
+Some notes:
 
 ssh-keygen -R hostname
 ssh-keygen -R 192.168.50.91
